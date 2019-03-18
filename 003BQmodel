@@ -1,0 +1,29 @@
+CREATE OR REPLACE MODEL
+  `tarpeydev.mm2019.BQmodel1`
+OPTIONS
+# ( model_type='linear_reg') AS
+  ( model_type='logistic_reg') AS
+
+SELECT
+label,
+#KenTeamAdjEM,
+KenTeamAdjO,
+KenTeamAdjD,
+KenTeamAdjT,
+#KenTeamLuck,
+#KenTeamOppAdjEM,
+KenTeamOppO,
+KenTeamOppD,
+#KenTeamOppNCAdjEM,
+#KenOppAdjEM,
+KenOppAdjO,
+KenOppAdjD,
+KenOppAdjT,
+#KenOppLuck,
+#KenOppOppAdjEM,
+KenOppOppO,
+KenOppOppD
+#KenOppOppNCAdjEM
+     
+
+FROM `tarpeydev.mm2019.agg2019gamevalues`;
